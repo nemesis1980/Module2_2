@@ -17,6 +17,7 @@
 	<ul class="ulleft">
 		<li><a href="index.php">HJEM</a></li>
 		<li><a href="about.php">OM OS</a></li>
+		<li><a href="profile.php">PROFIL</a></li>
 	</ul>
 	<ul class="ulright">
 		<?php
