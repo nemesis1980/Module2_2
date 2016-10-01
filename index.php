@@ -5,6 +5,8 @@
 	include 'header.php';
 ?>
 
+<H1>Velkommen til siden</H1>
+<p>Lorem Ipsum</p>
 
 
 </body>
