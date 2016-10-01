@@ -18,7 +18,6 @@
 // Her tjekkes der om man er logget ind i systemet
 
 	if (isset($_SESSION['id'])) {
-		echo "<p class='pCenter'>Du er nu logget ind</p>";
 	} else {
 		echo "Du er ikke logget ind";
 	}
