@@ -4,7 +4,7 @@ session_start();
 
 // Include bliver brugt til at loade database connection filen.
 
-include 'dbcon.php';
+	include 'dbcon.php';
 
 //Her bliver header.php, som er vores menu, inkluderet på siden
 
