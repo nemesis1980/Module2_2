@@ -4,18 +4,16 @@ session_start();
 
 // Include bliver brugt til at loade database connection filen.
 
-include '../dbcon.php';
+include 'dbcon.php';
 
 //Her bliver header.php, som er vores menu, inkluderet på siden
 
 	include 'header.php';
 ?>
 
-<H1>Profilside</H1>
-<p>Her kan du se dine informationer:</p>
-<br><br><br>
-
 <?php
+
+
 
 // Nedenfor bliver de forskellige variabler lavet, så de svarer til de data der skal sendes til databasen.
 
@@ -31,9 +29,33 @@ $uid = $_POST['uid'];
 
 		// Nedenfor bliver sql statements lavet, til at tjekke de indtastede værdier fra brugeren, i formen til at logge ind på hjemmesiden, og hvis username eller password er forkert, kommer der en fejlbesked.
 
-		$sql = "SELECT * FROM Client WHERE uid='$uid'";
+		$conn = mysqli_connect($servername, $username, $password, $table);
+
+		$uid = $_SESSION['id'];
+
+		$sql = "SELECT * FROM Client WHERE id='$uid'";
 		$result = mysqli_query($conn, $sql);
 
+
+		// Indsætter den hentede række i en array fra det id der er hentet fra databasen. 
+		$row = mysqli_fetch_assoc($result);
+
+
+		echo "
+
+
+		<H1>Profilside</H1>
+		<p>Her kan du se dine informationer:</p>
+		<br>
+			<p>id:</p>" . $row['id'] . "
+			<p>Navn:</p>" . $row['Name'] . "
+			<p>Adresse:</p>" . $row['Adress'] . "
+			<p>Kontakt:</p>" . $row['Contact'] . "
+			<p>Telefon:</p>" . $row['Phone'] . "
+		<br><br>
+
+
+		";	
 
 
 	} else {
@@ -41,5 +63,9 @@ $uid = $_POST['uid'];
 	}
 
 ?>
+
+
+
+
 </body>
 </html>
