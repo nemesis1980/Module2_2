@@ -5,7 +5,7 @@
 	include 'header.php';
 ?>
 
-<H1>Om os</H1>
-<p>Lorem Ipsum</p>
+<H1 class="indhold_overskrift">Om os</H1>
+<p class="indhold_text">Lorem Ipsum</p>
 </body>
 </html>

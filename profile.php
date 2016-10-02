@@ -11,6 +11,10 @@ session_start();
 	include 'header.php';
 ?>
 
+		<H1 class="indhold_overskrift">Profilside</H1>
+		<p class="indhold_text">Her kan du se dine informationer:</p>
+		<br>
+			<div class="profil-form">
 <?php
 
 
@@ -44,15 +48,13 @@ $uid = $_POST['uid'];
 		echo "
 
 
-		<H1>Profilside</H1>
-		<p>Her kan du se dine informationer:</p>
-		<br>
-			<p>id:</p>" . $row['id'] . "
-			<p>Navn:</p>" . $row['Name'] . "
-			<p>Adresse:</p>" . $row['Adress'] . "
-			<p>Kontakt:</p>" . $row['Contact'] . "
-			<p>Telefon:</p>" . $row['Phone'] . "
-		<br><br>
+			<p>id:" . " " . $row['id'] . "</p>
+			<p>Navn:" . " " . $row['Name'] . "</p>
+			<p>Adresse:" . " " . $row['Adress'] . "</p>
+			<p>Kontakt:" . " " . $row['Contact'] . "</p>
+			<p>Telefon:" . " " . $row['Phone'] . "</p>
+			<br><br>
+
 
 
 		";	
@@ -64,7 +66,7 @@ $uid = $_POST['uid'];
 
 ?>
 
-
+			</div>
 
 
 </body>

@@ -9,10 +9,10 @@
 
 	$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	if(strpos($url, 'error=empty') !==false) {
-		echo "Udfyld alle felter";
+		echo "Udfyld alle felter <br><br><br>";
 	}
 	elseif(strpos($url, 'error=username') !==false) {
-		echo "Brugernavn eksisterer allerede";
+		echo "Brugernavn eksisterer allerede <br><br>";
 	}
 
 // Her tjekkes der om man er logget ind i systemet
@@ -31,7 +31,7 @@
 	if (isset($_SESSION['id'])) {
 		echo "Du er allerede logget ind";
 	} else {
-		echo "<form action='includes/signup.inc.php' method='POST'>
+		echo "<form class ='register' action='includes/signup.inc.php' method='POST'>
 			<input type='text' name='Name' placeholder='Navn'><br>
 			<input type='text' name='Adress' placeholder='Adresse'><br>
 			<input type='text' name='Contact' placeholder='Kontakt navn'><br>

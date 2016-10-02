@@ -36,7 +36,7 @@ if (!$row = mysqli_fetch_assoc($result)) {
 }
 }
 
-// Nedenfor bliver man efter dataen er sendt, sendt tilbage til forsiden.
+// Nedenfor bliver man efter dataen er sendt, sendt tilbage til registrer siden.
 
 header("Location: ../profile.php");
 
